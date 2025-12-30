@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -9,6 +9,9 @@
   <meta name="keywords"
     content="Cable UTP, AMP, Categoria 6, CMR, 23AWG, cable red, networking, infraestructura" />
   <meta name="author" content="ds3comunicaciones" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,385 +31,422 @@
 
 <body>
   <!-- Breadcrumb Navigation -->
-  <div class="bg-white border-b px-3 py-3 text-xs md:text-sm text-slate-600 flex flex-nowrap items-center gap-1 overflow-x-auto scrollbar-hide whitespace-nowrap shadow-sm">
-    <a href="https://www.ds3comunicaciones.com/index.html" class="breadcrumb-link flex-shrink-0 hover:text-blue-600 p-1 rounded">
-      <i class="fa-solid fa-house text-[0.9em]"></i>
-    </a>
-    <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-angle-right text-[0.8em]"></i></span>
-    <a href="https://www.ds3comunicaciones.com/AMP/index.html" class="breadcrumb-link flex-shrink-0 hover:text-blue-600 px-1">
-      AMP
-    </a>
-    <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-angle-right text-[0.8em]"></i></span>
-    <a href="#" class="breadcrumb-link flex-shrink-0 hover:text-blue-600 px-1">
-      Cable de red Cat 6
-    </a>
-    <span class="text-gray-400 flex-shrink-0"><i class="fa-solid fa-angle-right text-[0.8em]"></i></span>
-    <span class="text-slate-800 font-semibold flex-shrink-0">
-      6-1427200-4
-    </span>
+  <div class="breadcrumb-custom border-bottom">
+    <div class="container py-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="https://www.ds3comunicaciones.com/index.html" style="color: var(--primary-blue);">
+              <i class="fa-solid fa-house"></i> Inicio
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="https://www.ds3comunicaciones.com/AMP/index.html" style="color: var(--primary-blue);">
+              AMP
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" style="color: var(--primary-blue);">
+              Cable de red Cat 6
+            </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            6-1427200-4
+          </li>
+        </ol>
+      </nav>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <main class="">
-    <div class="mx-auto border">
-      <div class="flex flex-col md:flex-row md:justify-evenly mx-auto">
-        <!-- SIDEBAR DE MARCAS (oculto en móvil) -->
-        <aside class="hidden lg:block bg-white p-2 rounded-lg shadow-md w-full md:w-48 lg:w-56 h-[80vh] overflow-y-auto scrollbar-hide">
-          <h2 class="text-lg font-bold text-gray-800 mb-4 pb-2 border-b">
-            Nuestras Marcas
-          </h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1">
-            <!-- Marcas -->
-            <a href="https://www.ds3comunicaciones.com/AMP/index.html"
-              class="flex items-center justify-center rounded-md hover:bg-gray-100 transition-all hover:-translate-y-0.5 p-1">
-              <img src="http://www.ds3comunicaciones.com/belden/images/amp_logo2-91x20.jpg" alt="AMP"
-                class="max-w-[100px] max-h-8 w-auto h-auto object-contain" />
-            </a>
-            <a href="https://www.ds3comunicaciones.com/cisco/index.html"
-              class="flex items-center justify-center p-1 rounded-md hover:bg-gray-100 transition-all hover:-translate-y-0.5">
-              <img src="http://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif" alt="Cisco"
-                class="max-w-[100px] max-h-8 w-auto h-auto object-contain" />
-            </a>
-            <a href="https://www.ds3comunicaciones.com/panduit/index.html"
-              class="flex items-center justify-center p-1 rounded-md hover:bg-gray-100 transition-all hover:-translate-y-0.5">
-              <img src="http://www.ds3comunicaciones.com/panduit/images/panduit_logo.jpg" alt="Panduit"
-                class="max-w-[100px] max-h-8 w-auto h-auto object-contain" />
-            </a>
-            <a href="https://www.ds3comunicaciones.com/belden/index.html"
-              class="flex items-center justify-center p-1 rounded-md hover:bg-gray-100 transition-all hover:-translate-y-0.5">
-              <img src="http://www.ds3comunicaciones.com/belden/images/Belden-Logo-93x15.jpg" alt="Belden"
-                class="max-w-[100px] max-h-8 w-auto h-auto object-contain" />
-            </a>
-          </div>
-        </aside>
+  <main class="py-4" style="background-color: #fafbfc;">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Columna Principal - Producto -->
+        <div class="col-lg-8">
+          <div class="card-custom p-4 mb-4">
+            <!-- Título del producto -->
+            <h1 class="h3 fw-bold mb-3" style="color: var(--text-dark);">
+              Cable UTP AMP Categoría 6 Chaqueta CMR 23AWG 6-1427200-4
+            </h1>
 
-        <!-- CONTENIDO PRINCIPAL CON SIDEBAR DERECHO -->
-        <div class="flex-1 flex flex-col lg:flex-row gap-6">
-          <!-- CONTENIDO PRINCIPAL DE PRODUCTOS -->
-          <div class="w-full lg:flex-1 bg-white rounded-lg shadow">
-            <div class="mx-auto max-w-[1200px] w-full">
-              <!-- Contenedor principal del producto -->
-              <div id="information-section" class="mt-5 space-y-6">
-                
-                <!-- Controles de pestañas -->
-                <div class="flex justify-center">
-                  <div class="inline-flex rounded-lg shadow-md overflow-hidden border-2 border-gray-300">
-                    <button id="product-tab"
-                      class="tab-button active px-8 py-3 text-sm md:text-base font-semibold bg-blue-600 text-white hover:bg-blue-700 focus:z-10 focus:outline-none transition-colors">
-                      <i class="fas fa-info-circle mr-2"></i>Producto
-                    </button>
-                    <button id="images-tab"
-                      class="tab-button px-8 py-3 text-sm md:text-base font-semibold bg-white text-gray-700 hover:bg-gray-100 focus:z-10 focus:outline-none transition-colors">
-                      <i class="fas fa-images mr-2"></i>Imágenes
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Sección de Producto -->
-                <div id="product-content">
-                  <!-- Sección de información e imágenes (dos columnas) -->
-                  <div class="w-full flex flex-col lg:flex-row gap-6">
-                    <!-- Sección de imágenes -->
-                    <div class="lg:w-1/2">
-                      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-                        <div class="w-full h-[350px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-50">
-                          <img id="img_main"
-                            src="./icons/6-1427200-4-1.jpg"
-                            alt="Cable UTP AMP Cat 6" class="max-h-full max-w-full object-contain cursor-pointer"
-                            onclick="viewImage(this.src)" />
-                        </div>
-
-                        <!-- Miniaturas -->
-                        <div class="flex gap-3 mt-4 justify-center">
-                          <div class="thumbnail-container w-20 h-20 border-2 border-gray-200 rounded-lg p-1 cursor-pointer">
-                            <img src="./icons/6-1427200-4-1.jpg"
-                              alt="Cable UTP" class="w-full h-full object-contain" onclick="toExchangeImage(this)" />
-                          </div>
-                          <div class="thumbnail-container w-20 h-20 border-2 border-gray-200 rounded-lg p-1 cursor-pointer">
-                            <img src="./icons/Caja.jpg"
-                              alt="Caja AMP" class="w-full h-full object-contain" onclick="toExchangeImage(this)" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Sección de información básica -->
-                    <div class="lg:w-1/2 px-2">
-                      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
-                        <h1 class="text-lg md:text-xl font-bold mb-4 text-[#0D274D] leading-relaxed">
-                          Cable UTP AMP Categoría 6 Chaqueta CMR 23AWG 6-1427200-4
-                        </h1>
-
-                        <div class="mb-6 space-y-3">
-                          <span class="text-3xl font-bold text-blue-600 block">U$ 187.00</span>
-                          <a href="https://www.ds3comunicaciones.com/pedido.html"
-                            class="btn-buy inline-flex items-center gap-2 bg-blue-600 text-white font-semibold rounded-lg px-6 py-3 hover:bg-blue-700 transition shadow-md"
-                            target="_blank">
-                            <i class="fas fa-shopping-cart"></i>
-                            Comprar ahora
-                          </a>
-                        </div>
-
-                        <!-- Resumen rápido -->
-                        <div class="border-t border-b py-4 my-4">
-                          <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-center">
-                              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                              <span>Categoría 6 certificada - CMR 23AWG</span>
-                            </li>
-                            <li class="flex items-center">
-                              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                              <span>1000ft por rollo - Sin empalmes</span>
-                            </li>
-                            <li class="flex items-center">
-                              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                              <span>Soporta Gigabit Ethernet (1000BASE-T)</span>
-                            </li>
-                            <li class="flex items-center">
-                              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                              <span>Cumple TIA/EIA-568-B.2-1 e ISO/IEC 11801</span>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <!-- Documentación -->
-                        <div class="mt-auto">
-                          <h3 class="font-semibold text-base mb-3 text-[#0D274D]">
-                            📄 Documentación:
-                          </h3>
-                          <div class="flex flex-wrap gap-2">
-                            <a href="#"
-                              class="download-btn flex items-center gap-2 text-blue-600 hover:text-blue-800 border-2 border-gray-200 rounded-lg px-3 py-2 hover:bg-blue-50 font-medium text-sm"
-                              target="_blank">
-                              <i class="fas fa-file-pdf text-red-500 text-lg"></i>
-                              <span>Ficha técnica</span>
-                            </a>
-                            <a href="#"
-                              class="download-btn flex items-center gap-2 text-blue-600 hover:text-blue-800 border-2 border-gray-200 rounded-lg px-3 py-2 hover:bg-blue-50 font-medium text-sm"
-                              target="_blank">
-                              <i class="fas fa-file-alt text-green-500 text-lg"></i>
-                              <span>Specs</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div class="row">
+              <!-- Columna de Imágenes -->
+              <div class="col-md-6 mb-4">
+                <div class="product-image-container">
+                  <!-- Imagen Principal -->
+                  <div class="main-image-wrapper text-center p-4 bg-white border rounded-3 mb-3" style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <img id="mainProductImage" 
+                      src="https://www.ds3comunicaciones.com/AMP/images/cable_utp_amp.jpg" 
+                      alt="Cable UTP AMP Cat 6"
+                      class="img-fluid product-image"
+                      style="max-height: 380px; cursor: pointer;"
+                      onclick="openImageModal(this.src)" />
                   </div>
 
-                  <!-- Especificaciones Técnicas (ancho completo) -->
-                  <div class="w-full px-2">
-                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-                      <h3 class="font-bold text-xl mb-5 text-[#0D274D]">
-                        ⚡ Características Principales
-                      </h3>
-                      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center hover:shadow-md hover:scale-105 transition-all">
-                          <div class="text-blue-600 font-bold text-2xl">Cat 6</div>
-                          <div class="text-xs text-gray-600 mt-1 font-medium">Certificada</div>
-                        </div>
-                        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center hover:shadow-md hover:scale-105 transition-all">
-                          <div class="text-blue-600 font-bold text-2xl">CMR</div>
-                          <div class="text-xs text-gray-600 mt-1 font-medium">23AWG</div>
-                        </div>
-                        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center hover:shadow-md hover:scale-105 transition-all">
-                          <div class="text-blue-600 font-bold text-2xl">1000ft</div>
-                          <div class="text-xs text-gray-600 mt-1 font-medium">Por Rollo</div>
-                        </div>
-                        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center hover:shadow-md hover:scale-105 transition-all">
-                          <div class="text-blue-600 font-bold text-2xl">Gigabit</div>
-                          <div class="text-xs text-gray-600 mt-1 font-medium">Ethernet</div>
-                        </div>
-                      </div>
-
-                      <!-- Tabla de Especificaciones -->
-                      <div class="mt-6">
-                        <div class="flex items-center justify-between mb-4">
-                          <h4 class="font-bold text-lg text-[#0D274D]">📋 Especificaciones Técnicas Completas</h4>
-                          <span class="text-xs text-gray-500 italic flex items-center gap-1">
-                            <i class="fas fa-arrow-down animate-bounce"></i>
-                            Desplázate para ver más
-                          </span>
-                        </div>
-                        <div class="border-2 border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                          <div class="max-h-72 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-100">
-                            <table class="w-full text-sm">
-                              <tbody class="divide-y divide-gray-200">
-                                <tr class="hover:bg-blue-50 transition-colors">
-                                  <td class="px-4 py-3 font-medium text-gray-700 w-2/5">Categoría</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">Categoría 6 - TIA/EIA-568-B.2-1</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors bg-gray-50">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Tipo de Cable</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">UTP (Par Trenzado sin Blindaje)</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Calibre</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">23AWG</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors bg-gray-50">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Chaqueta</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">CMR (Riser)</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Longitud</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">1000ft (305m) por rollo</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors bg-gray-50">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Voltage</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">300VAC o VDC</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Velocidad de Propagación</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">70%</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors bg-gray-50">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Temperatura Operación</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">-20°C a 60°C</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Temperatura Almacenamiento</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">-20°C a 80°C</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors bg-gray-50">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Aplicaciones</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">Gigabit Ethernet, 10/100BASE-TX, Token Ring, ATM, VoIP</td>
-                                </tr>
-                                <tr class="hover:bg-blue-50 transition-colors">
-                                  <td class="px-4 py-3 font-medium text-gray-700">Certificaciones</td>
-                                  <td class="px-4 py-3 text-[#0D274D]">TIA/EIA-568-B.2-1, ISO/IEC 11801 Clase E, UL, NEC</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Fin del contenido de Producto -->
-
-                <!-- Sección de galería de imágenes -->
-                <div id="images-section" class="hidden px-2">
-                  <div class="bg-white rounded-xl shadow-md p-6">
-                    <h2 class="text-2xl font-bold mb-6 text-[#0D274D]">
-                      <i class="fas fa-images text-blue-600 mr-2"></i>Galería de Imágenes
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
-                        <img src="./icons/6-1427200-4-1.jpg"
-                          alt="Cable UTP AMP"
-                          class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform"
-                          onclick="viewImage(this.src)" />
-                        <div class="bg-white p-2 text-center text-sm text-gray-600">Cable UTP AMP Categoría 6</div>
-                      </div>
-                      <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
-                        <img src="./icons/Caja.jpg"
-                          alt="Caja Cable AMP"
-                          class="w-full h-64 object-contain p-4 cursor-pointer hover:scale-105 transition-transform"
-                          onclick="viewImage(this.src)" />
-                        <div class="bg-white p-2 text-center text-sm text-gray-600">Presentación en Caja</div>
-                      </div>
-                    </div>
+                  <!-- Imagen de Referencia (Caja) -->
+                  <div class="reference-image text-center p-3 bg-light border rounded-3">
+                    <img src="https://www.ds3comunicaciones.com/AMP/images/amp_box.jpg" 
+                      alt="Caja Cable UTP AMP"
+                      class="img-fluid"
+                      style="max-height: 150px; cursor: pointer;"
+                      onclick="toExchangeMainImage(this)" />
+                    <p class="small text-muted mt-2 mb-0">Foto Referencial</p>
                   </div>
                 </div>
               </div>
 
-              <!-- Modal para imágenes -->
-              <div id="image-modal"
-                class="fixed hidden inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-                <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer"
-                  onclick="closeModal()">&times;</span>
-                <img id="modal-image" class="max-w-full max-h-full" src="" alt="Imagen ampliada" />
+              <!-- Columna de Información -->
+              <div class="col-md-6">
+                <!-- Precio -->
+                <div class="price-section p-4 mb-4 rounded-3" style="background: linear-gradient(135deg, var(--primary-blue-lighter) 0%, #fff 100%); border-left: 4px solid var(--primary-blue);">
+                  <p class="text-muted mb-2 small">Precio especial</p>
+                  <div class="d-flex align-items-baseline mb-3">
+                    <span class="price-tag me-2">U$ 187.00</span>
+                    <span class="text-muted small">por rollo</span>
+                  </div>
+                  <button class="btn btn-primary-custom w-100 mb-2 pulse-animation">
+                    <i class="fas fa-shopping-cart me-2"></i>
+                    Comprar
+                  </button>
+                  <a href="https://wa.me/994428965?text=Hola, estoy interesado en el Cable UTP AMP Cat 6 (6-1427200-4)"
+                    class="btn btn-outline-custom w-100"
+                    target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    Consultar por WhatsApp
+                  </a>
+                </div>
+
+                <!-- Descripción Breve -->
+                <div class="description-brief">
+                  <h5 class="fw-bold mb-3" style="color: var(--primary-blue);">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Descripción
+                  </h5>
+                  <p class="mb-3" style="line-height: 1.8; text-align: justify;">
+                    Los Cables AMP NetConnect categoría 6 exceden los requerimientos TIA/EIA-568-B.2-1 e ISO / IEC 11801 Clase E
+                  </p>
+                  <p class="mb-3" style="line-height: 1.8; text-align: justify;">
+                    Además cumplen con todos los requisitos de rendimiento para aplicaciones actuales y propuestos, tales como Gigabit Ethernet (1000BASE-T), 10/100BASE-TX, Token Ring, ATM 155 Mbps, 100 Mbps TPPMD, Vic/Video ISDN, analógico y digital y analógica y digital y VoIP (VoIP).
+                  </p>
+                  <p class="mb-0" style="line-height: 1.8; text-align: justify;">
+                    AMP NetConnect categoría 6 cables UTP están disponibles en (CMR) colores estándar, incluyendo blanco, negro, y azul. El embalaje es en un reel-in-box, con el estándar 1000ft libres de empalme longitudinales.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Características Destacadas -->
+            <div class="features-section mt-4 p-4 bg-light rounded-3">
+              <h5 class="fw-bold mb-4" style="color: var(--primary-blue);">
+                <i class="fas fa-star me-2"></i>
+                Características Principales
+              </h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="feature-item d-flex align-items-start">
+                    <i class="fas fa-check-circle fa-lg me-3" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                    <div>
+                      <strong>Categoría 6 Certificada</strong>
+                      <p class="small text-muted mb-0">Cumple estándares TIA/EIA-568-B.2-1 e ISO/IEC 11801</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item d-flex align-items-start">
+                    <i class="fas fa-check-circle fa-lg me-3" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                    <div>
+                      <strong>CMR 23AWG</strong>
+                      <p class="small text-muted mb-0">Cable horizontal de alta calidad</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item d-flex align-items-start">
+                    <i class="fas fa-check-circle fa-lg me-3" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                    <div>
+                      <strong>1000ft / Rollo</strong>
+                      <p class="small text-muted mb-0">Embalaje en reel-in-box sin empalmes</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item d-flex align-items-start">
+                    <i class="fas fa-check-circle fa-lg me-3" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                    <div>
+                      <strong>Gigabit Ethernet</strong>
+                      <p class="small text-muted mb-0">Soporta 1000BASE-T y aplicaciones VoIP</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sección de Verificación -->
+            <div class="verification-section mt-4 p-4 rounded-3" style="background-color: #fff3cd; border-left: 4px solid #ffc107;">
+              <h6 class="fw-bold mb-3">
+                <i class="fas fa-exclamation-triangle me-2" style="color: #ffc107;"></i>
+                Verificación de Rendimiento
+              </h6>
+              <p class="mb-0 small" style="line-height: 1.8;">
+                Rendimiento del cable debe ser verificada independientemente y caracterizado a 600 MHz. Cable se suministra en un carrete-in-box. Independiente verificación del cumplimiento de inflamabilidad según NEC artículo 800 y NFPA 70, CMR (ANSI / UL 1666, IEC 332-1). Cable horizontal debe ser AMP NETCONNECT número X-1427200-X.
+              </p>
+            </div>
+
+            <!-- Downloads -->
+            <div class="downloads-section mt-4 p-4 bg-white border rounded-3">
+              <h5 class="fw-bold mb-4" style="color: var(--primary-blue);">
+                <i class="fas fa-download me-2"></i>
+                Descargas
+              </h5>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <a href="#" class="download-link text-center d-block p-3 h-100">
+                    <i class="fas fa-file-pdf fa-3x mb-2 text-danger"></i>
+                    <div class="fw-bold small" style="color: var(--primary-blue);">Download</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Ficha técnica</div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="download-link text-center d-block p-3 h-100">
+                    <i class="fas fa-table fa-3x mb-2" style="color: var(--primary-blue);"></i>
+                    <div class="fw-bold small" style="color: var(--primary-blue);">Datos Técnicos</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Ver especificaciones</div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="download-link text-center d-block p-3 h-100">
+                    <i class="fas fa-list-alt fa-3x mb-2 text-success"></i>
+                    <div class="fw-bold small" style="color: var(--primary-blue);">Especificaciones Técnicas</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Detalles completos</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabla de Especificaciones Técnicas -->
+            <div class="specifications-table mt-4">
+              <h5 class="fw-bold mb-4" style="color: var(--primary-blue);">
+                <i class="fas fa-cogs me-2"></i>
+                Especificaciones Técnicas
+              </h5>
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead style="background-color: var(--primary-blue); color: white;">
+                    <tr>
+                      <th scope="col">Especificación</th>
+                      <th scope="col">Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-semibold">Voltage</td>
+                      <td>300VAC or VDC</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Velocidad Nominal de Propagación</td>
+                      <td>70%</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Temperatura de Operación</td>
+                      <td>–20°C a -60°C</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Temperatura de Almacenamiento</td>
+                      <td>–20°C a -80°C</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
-          <!-- Fin del contenido principal de productos -->
-
-          <!-- SIDEBAR DE LISTA DE PRECIOS (lado derecho) -->
-          <aside id="links-sidebar"
-            class="hidden lg:block w-64 xl:w-72 bg-white p-4 rounded-lg shadow-md h-full">
-            <div class="links-section bg-white h-full overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-100">
-              <h3 class="text-lg font-bold text-[#0D274D] mb-4 pb-3 border-b-2 border-blue-600 bg-white">
-                📋 Listas de Precios
-              </h3>
-              <ul class="space-y-1">
-                <!-- AMP -->
-                <li class="hover:bg-blue-50 rounded-md transition-all bg-blue-50 border-l-4 border-blue-600">
-                  <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html" target="_blank"
-                    class="block px-3 py-2 text-sm text-blue-700 hover:text-blue-900 font-semibold hover:translate-x-1 transition-transform">
-                    <i class="fas fa-file-invoice-dollar mr-2 text-xs"></i>AMP
-                  </a>
-                </li>
-                <li class="hover:bg-blue-50 rounded-md transition-all">
-                  <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html" target="_blank"
-                    class="block px-3 py-2 text-sm text-blue-600 hover:text-blue-800 font-medium hover:translate-x-1 transition-transform">
-                    <i class="fas fa-file-invoice-dollar mr-2 text-xs"></i>CISCO
-                  </a>
-                </li>
-                <li class="hover:bg-blue-50 rounded-md transition-all">
-                  <a href="https://www.ds3comunicaciones.com/panduit/precios_panduit.html" target="_blank"
-                    class="block px-3 py-2 text-sm text-blue-600 hover:text-blue-800 font-medium hover:translate-x-1 transition-transform">
-                    <i class="fas fa-file-invoice-dollar mr-2 text-xs"></i>Panduit
-                  </a>
-                </li>
-                <li class="hover:bg-blue-50 rounded-md transition-all">
-                  <a href="https://www.ds3comunicaciones.com/belden/precios_belden.html" target="_blank"
-                    class="block px-3 py-2 text-sm text-blue-600 hover:text-blue-800 font-medium hover:translate-x-1 transition-transform">
-                    <i class="fas fa-file-invoice-dollar mr-2 text-xs"></i>Belden
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          <!-- Fin del sidebar de precios -->
         </div>
-        <!-- Fin del contenedor flex principal -->
-      </div>
-      <!-- Fin del contenedor de la página -->
-    </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-8 px-4 sm:px-6 lg:px-8 w-full">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="space-y-4">
-          <img src="http://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones"
-            class="w-32 h-auto" />
-          <div class="space-y-2">
-            <h3 class="text-lg font-bold text-gray-800">Redes Sociales</h3>
-            <div class="flex space-x-4">
-              <a href="https://wa.me/994428965" target="_blank"
-                class="text-gray-600 hover:text-green-600 transition-colors">
-                <i class="fab fa-whatsapp text-xl"></i>
+        <!-- Sidebar - Búsqueda y Filtros -->
+        <div class="col-lg-4">
+          <!-- Buscador -->
+          <div class="card-custom p-4 mb-4">
+            <h5 class="fw-bold mb-3" style="color: var(--text-dark);">
+              <i class="fas fa-search me-2"></i>
+              Buscar Productos
+            </h5>
+            <form action="https://www.ds3comunicaciones.com/find.html" method="get">
+              <div class="input-group mb-3">
+                <input type="text" name="q" class="form-control" placeholder="Buscar..." required>
+                <input type="hidden" name="cx" value="partner-pub-9265252540298851:f2549i3fi60">
+                <input type="hidden" name="cof" value="FORID:10">
+                <input type="hidden" name="ie" value="ISO-8859-1">
+                <button class="btn btn-primary-custom" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Productos Relacionados -->
+          <div class="card-custom p-4 mb-4">
+            <h5 class="fw-bold mb-3" style="color: var(--text-dark);">
+              <i class="fas fa-network-wired me-2"></i>
+              Productos Relacionados
+            </h5>
+            <div class="related-products">
+              <a href="#" class="related-product-item d-flex align-items-center p-2 mb-2 rounded border text-decoration-none">
+                <img src="https://www.ds3comunicaciones.com/AMP/images/cable_utp_amp.jpg" 
+                  alt="Cable Cat 6" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <div class="small fw-semibold" style="color: var(--text-dark);">Cable Cat 6A</div>
+                  <div class="text-muted" style="font-size: 0.75rem;">U$ 245.00</div>
+                </div>
+              </a>
+              <a href="#" class="related-product-item d-flex align-items-center p-2 mb-2 rounded border text-decoration-none">
+                <img src="https://www.ds3comunicaciones.com/AMP/images/jack_amp.jpg" 
+                  alt="Jack RJ45" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <div class="small fw-semibold" style="color: var(--text-dark);">Jack RJ45 Cat 6</div>
+                  <div class="text-muted" style="font-size: 0.75rem;">U$ 8.50</div>
+                </div>
+              </a>
+              <a href="#" class="related-product-item d-flex align-items-center p-2 mb-2 rounded border text-decoration-none">
+                <img src="https://www.ds3comunicaciones.com/AMP/images/patch_panel.jpg" 
+                  alt="Patch Panel" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <div class="small fw-semibold" style="color: var(--text-dark);">Patch Panel 48p</div>
+                  <div class="text-muted" style="font-size: 0.75rem;">U$ 185.00</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Información de Contacto -->
+          <div class="card-custom p-4" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); color: white;">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-headset me-2"></i>
+              ¿Necesitas Ayuda?
+            </h5>
+            <p class="small mb-3">Nuestro equipo está listo para asesorarte</p>
+            <div class="contact-info">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-phone me-2"></i>
+                <span>994 428 965</span>
+              </div>
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-phone me-2"></i>
+                <span>996 533 223</span>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                <span class="small">netperu100@hotmail.com</span>
+              </div>
+              <a href="https://wa.me/994428965" target="_blank" 
+                class="btn btn-light w-100">
+                <i class="fab fa-whatsapp me-2"></i>
+                Contactar por WhatsApp
               </a>
             </div>
           </div>
         </div>
-        <div class="space-y-4">
-          <h3 class="text-lg font-bold text-gray-800">Contacto</h3>
-          <div class="space-y-3">
-            <a href="https://wa.me/994428965" target="_blank"
-              class="flex items-center text-gray-600 hover:text-green-600 transition-colors">
-              <i class="fas fa-phone-alt mr-2"></i>
-              <span>994 428 965</span>
-            </a>
-            <a href="https://wa.me/996533223" target="_blank"
-              class="flex items-center text-gray-600 hover:text-green-600 transition-colors">
-              <i class="fas fa-phone-alt mr-2"></i>
-              <span>996 533 223</span>
-            </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de Imagen -->
+  <div id="image-modal" class="fixed hidden inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+    onclick="closeImageModal()">
+    <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer">&times;</span>
+    <img id="modal-image" class="max-w-full max-h-full rounded-lg" src="" alt="Imagen ampliada" />
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="http://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones"
+            class="mb-3" style="max-width: 150px;" />
+          <p class="text-muted small">Líderes en soluciones de redes y comunicaciones en Perú</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold mb-3">Enlaces Rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="https://www.ds3comunicaciones.com/index.html" class="text-muted text-decoration-none small">Inicio</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/AMP/index.html" class="text-muted text-decoration-none small">Productos AMP</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/us.html" class="text-muted text-decoration-none small">Nosotros</a></li>
+            <li><a href="https://www.ds3comunicaciones.com/pedido.html" class="text-muted text-decoration-none small">Realizar Pedido</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold mb-3">Contacto</h6>
+          <div class="text-muted small">
+            <p class="mb-2"><i class="fas fa-phone me-2"></i>994 428 965</p>
+            <p class="mb-2"><i class="fas fa-phone me-2"></i>996 533 223</p>
+            <p class="mb-2"><i class="fas fa-envelope me-2"></i>netperu100@hotmail.com</p>
+            <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Lima, Perú</p>
           </div>
         </div>
       </div>
-      <div class="border-t border-gray-200 mt-8 pt-6 text-center text-gray-500">
-        <p>&copy; 2025 DS3 Comunicaciones. Todos los derechos reservados.</p>
-      </div>
+      <hr class="my-4">
+      <p class="text-center text-muted small mb-0">&copy; 2025 DS3 Comunicaciones. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="./js/change_tabs.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Scripts personalizados -->
+  <script>
+    // Cambiar imagen principal
+    function toExchangeMainImage(thumbnail) {
+      const mainImage = document.getElementById('mainProductImage');
+      if (mainImage && thumbnail) {
+        mainImage.style.opacity = '0';
+        setTimeout(() => {
+          mainImage.src = thumbnail.src;
+          mainImage.style.opacity = '1';
+        }, 200);
+      }
+    }
+
+    // Abrir modal de imagen
+    function openImageModal(imageSrc) {
+      const modal = document.getElementById('image-modal');
+      const modalImage = document.getElementById('modal-image');
+      if (modal && modalImage) {
+        modalImage.src = imageSrc;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    // Cerrar modal de imagen
+    function closeImageModal() {
+      const modal = document.getElementById('image-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Cerrar modal con ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeImageModal();
+      }
+    });
+
+    // Efectos hover en productos relacionados
+    document.querySelectorAll('.related-product-item').forEach(item => {
+      item.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'var(--primary-blue-lighter)';
+        this.style.borderColor = 'var(--primary-blue)';
+        this.style.transform = 'translateX(4px)';
+      });
+      item.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = '';
+        this.style.borderColor = '';
+        this.style.transform = '';
+      });
+    });
+  </script>
 </body>
 
 </html>
