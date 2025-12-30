@@ -1,348 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* Variables de Colores Corporativos */
+/* Variables de colores para mantener la paleta */
 :root {
-  --primary-blue: #3366ff;
-  --primary-blue-hover: #2952cc;
-  --primary-blue-light: #5580ff;
-  --primary-blue-lighter: #e8eeff;
-  --primary-blue-dark: #1a3399;
-  --text-dark: #0D274D;
-  --gray-100: #f8f9fa;
-  --gray-200: #e9ecef;
-  --gray-600: #6c757d;
-  --gray-800: #343a40;
+  --primary-blue: #0D274D;
+  --secondary-blue: #2563eb;
+  --accent-blue: #3b82f6;
+  --light-gray: #f9fafb;
+  --border-gray: #e5e7eb;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
   --white: #ffffff;
-  --shadow-sm: 0 2px 4px rgba(51, 102, 255, 0.08);
-  --shadow-md: 0 4px 8px rgba(51, 102, 255, 0.12);
-  --shadow-lg: 0 8px 16px rgba(51, 102, 255, 0.16);
-  --transition: all 0.3s ease;
 }
 
-/* Reset y Base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-dark);
-  background-color: #fafbfc;
-  line-height: 1.6;
-  overflow-x: hidden;
+  background-color: var(--light-gray);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-/* Scrollbar personalizada */
+/* Scrollbar personalizado */
 .scrollbar-hide {
-  scrollbar-width: none; /* Para Firefox */
-  -ms-overflow-style: none; /* Para IE y Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
+  
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Para Chrome, Safari y Opera */
+  display: none;
 }
 
-/* Scrollbar elegante */
-::-webkit-scrollbar {
+/* Scrollbar delgado personalizado para tablas */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #2563eb #f3f4f6;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
   width: 8px;
-  height: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--gray-100);
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary-blue-light);
-  border-radius: 4px;
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+  border: 2px solid #f3f4f6;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-blue);
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
 }
 
-/* Mejoras de Navegación */
-.nav-item {
-  transition: var(--transition);
-  border: 1px solid transparent;
-}
-
-.nav-item:hover {
-  background-color: var(--primary-blue-lighter);
-  border-color: var(--primary-blue-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-.nav-item:active {
-  transform: translateY(0);
-}
-
-/* Botones Mejorados */
-.btn-primary-custom {
-  background-color: var(--primary-blue);
-  color: var(--white);
-  border: 2px solid var(--primary-blue);
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  box-shadow: var(--shadow-sm);
-}
-
-.btn-primary-custom:hover {
-  background-color: var(--primary-blue-hover);
-  border-color: var(--primary-blue-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  color: var(--white);
-}
-
-.btn-primary-custom:active {
-  transform: translateY(0);
-}
-
-.btn-outline-custom {
-  background-color: transparent;
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: var(--transition);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-outline-custom:hover {
-  background-color: var(--primary-blue);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Cards Mejoradas */
-.card-custom {
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--gray-200);
-  transition: var(--transition);
-  overflow: hidden;
-}
-
-.card-custom:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
-  border-color: var(--primary-blue-light);
-}
-
-/* Imágenes de Producto */
-.product-image {
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.product-image:hover {
-  transform: scale(1.05);
-}
-
-/* Miniaturas de Imágenes */
-.thumbnail {
-  transition: var(--transition);
-  border: 2px solid var(--gray-200);
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.thumbnail:hover {
-  border-color: var(--primary-blue);
-  box-shadow: var(--shadow-sm);
-  transform: scale(1.05);
-}
-
-.thumbnail.active {
-  border-color: var(--primary-blue);
-  box-shadow: 0 0 0 3px var(--primary-blue-lighter);
-}
-
-/* Precio */
-.price-tag {
-  color: var(--primary-blue);
-  font-size: 2rem;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(51, 102, 255, 0.1);
-}
-
-/* Lista de Especificaciones */
-.spec-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid var(--gray-200);
-  transition: var(--transition);
-}
-
-.spec-list li:last-child {
-  border-bottom: none;
-}
-
-.spec-list li:hover {
-  background-color: var(--primary-blue-lighter);
-  padding-left: 8px;
-}
-
-.spec-list li i {
-  color: var(--primary-blue);
-  margin-right: 8px;
-  font-size: 10px;
-}
-
-/* Details / Acordeón */
-details {
-  transition: var(--transition);
-}
-
-details summary {
-  cursor: pointer;
-  user-select: none;
-  transition: var(--transition);
-}
-
-details summary:hover {
-  background-color: var(--primary-blue-lighter) !important;
-}
-
-details[open] summary {
-  background-color: var(--primary-blue-lighter) !important;
-  color: var(--primary-blue-dark);
-  font-weight: 600;
-}
-
-/* Links de Descarga */
-.download-link {
-  transition: var(--transition);
-  border: 2px solid var(--gray-200);
-  border-radius: 8px;
-  padding: 10px 16px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.download-link:hover {
-  border-color: var(--primary-blue);
-  background-color: var(--primary-blue-lighter);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Breadcrumb mejorado */
-.breadcrumb-custom {
-  background-color: var(--white);
-  border-radius: 8px;
-  padding: 12px 16px;
-  box-shadow: var(--shadow-sm);
-}
-
-.breadcrumb-custom a {
-  color: var(--primary-blue);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.breadcrumb-custom a:hover {
-  color: var(--primary-blue-hover);
-  text-decoration: underline;
-}
-
-/* Tabs Mejoradas */
-.tab-button {
-  transition: var(--transition);
+/* Estilos para la tabla de especificaciones */
+.specs-table-container {
   position: relative;
 }
 
-.tab-button::after {
+.specs-table-container::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
-  height: 3px;
-  background-color: var(--primary-blue);
-  transition: var(--transition);
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent, rgba(243, 244, 246, 0.9));
+  pointer-events: none;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.tab-button.active::after,
-.tab-button:hover::after {
-  width: 100%;
-}
+/* ========================================
+   ANIMACIONES SUTILES Y PROFESIONALES
+======================================== */
 
-.tab-button.active {
-  background-color: var(--primary-blue) !important;
-  color: var(--white) !important;
-}
-
-/* Sidebar de Marcas */
-.brand-link {
-  transition: var(--transition);
-  padding: 12px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brand-link:hover {
-  background-color: var(--primary-blue-lighter);
-  transform: scale(1.05);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Footer mejorado */
-footer a {
-  transition: var(--transition);
-}
-
-footer a:hover {
-  color: var(--primary-blue) !important;
-  transform: translateX(4px);
-}
-
-/* Productos Relacionados */
-.product-card {
-  transition: var(--transition);
-  height: 100%;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-}
-
-.product-card:hover .product-title {
-  color: var(--primary-blue);
-}
-
-/* Animaciones */
+/* Animación de fade-in suave para elementos al cargar */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -350,153 +90,451 @@ footer a:hover {
   }
 }
 
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes slideInLeft {
+/* Animación de escala sutil */
+@keyframes scaleIn {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.5s ease-out;
-}
-
-@keyframes pulse {
-  0%, 100% {
     transform: scale(1);
   }
+}
+
+/* Animación de pulso suave para botones CTA */
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
   50% {
-    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
   }
 }
 
-.pulse-animation {
-  animation: pulse 2s infinite;
-}
-
-/* Modal de Imagen */
-#image-modal {
-  backdrop-filter: blur(4px);
-  z-index: 9999;
-}
-
-#image-modal img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 8px;
-  box-shadow: var(--shadow-lg);
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
+/* Animación de bounce para indicador de scroll */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  h2 {
-    font-size: 1.3rem;
-  }
-  
-  h3 {
-    font-size: 1.1rem;
-  }
-  
-  .price-tag {
-    font-size: 1.5rem;
+  50% {
+    transform: translateY(-5px);
   }
 }
 
-/* Estilos para dispositivos táctiles */
-@media (hover: none) and (pointer: coarse) {
-  .nav-item:hover,
-  .card-custom:hover,
-  .product-card:hover {
-    transform: none;
+.animate-bounce {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Animación de shimmer para cargas */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
   }
 }
 
-/* Mejoras de accesibilidad */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--primary-blue);
-  outline-offset: 2px;
+/* ========================================
+   ESTILOS GENERALES MEJORADOS
+======================================== */
+
+/* Contenedor principal con animación de entrada */
+main {
+  animation: fadeIn 0.5s ease-out;
 }
 
-/* Loading states */
-.loading {
-  opacity: 0.6;
-  pointer-events: none;
+/* Navegación superior mejorada */
+.nav-container {
+  transition: all 0.3s ease;
 }
 
-/* Badge personalizado */
-.badge-custom {
-  background-color: var(--primary-blue);
-  color: var(--white);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
+.nav-item {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-/* Lista de Precios Mejorada */
-.price-list-item {
-  transition: var(--transition);
-  background-color: var(--white);
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-blue);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
-.price-list-item:hover {
-  background-color: var(--primary-blue-lighter) !important;
-  border-color: var(--primary-blue) !important;
+.nav-item:hover {
+  background-color: rgba(37, 99, 235, 0.05);
+  transform: translateY(-2px);
+}
+
+.nav-item:hover::after {
+  width: 80%;
+}
+
+.nav-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+/* Breadcrumb mejorado */
+.breadcrumb-link {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.breadcrumb-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--secondary-blue);
+  transition: width 0.3s ease;
+}
+
+.breadcrumb-link:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   SIDEBAR DE MARCAS OPTIMIZADO
+======================================== */
+
+aside {
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+aside a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+aside a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+aside a:hover::before {
+  left: 100%;
+}
+
+aside a:hover {
   transform: translateX(4px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.price-list-item:hover .fa-chevron-right {
-  transform: translateX(3px);
+/* ========================================
+   SECCIÓN DE PRODUCTO
+======================================== */
+
+/* Contenedor de producto con entrada suave */
+#information-section {
+  animation: scaleIn 0.5s ease-out 0.3s backwards;
 }
 
-.price-list-item .fa-chevron-right {
-  transition: var(--transition);
+/* Imagen principal con efecto profesional */
+#img_main {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.price-list-item:active {
-  transform: translateX(2px);
+#img_main:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
 }
 
-/* Campo de búsqueda de lista de precios */
-#searchPriceList {
-  font-size: 0.875rem;
+/* Miniaturas con efecto elegante */
+.thumbnail-container {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-#searchPriceList:focus {
-  border-color: var(--primary-blue);
-  box-shadow: 0 0 0 0.2rem rgba(51, 102, 255, 0.15);
-}
-
-.input-group-text {
-  background-color: var(--white) !important;
-}
-
-/* Animación para items que no coinciden con la búsqueda */
-.price-list-item.hidden {
-  display: none;
+.thumbnail-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 99, 235, 0.1);
   opacity: 0;
-  animation: fadeOut 0.2s ease-out;
+  transition: opacity 0.3s ease;
 }
 
-.price-list-item.visible {
-  display: flex;
+.thumbnail-container:hover::after {
   opacity: 1;
-  animation: fadeIn 0.3s ease-in;
+}
+
+.thumbnail-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--secondary-blue) !important;
+}
+
+/* ========================================
+   BOTONES Y CTA
+======================================== */
+
+/* Botón de compra con animación de atención */
+.btn-buy {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-buy::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-buy:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+.btn-buy:active {
+  transform: translateY(0);
+}
+
+/* Botones de descarga con iconos animados */
+.download-btn {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.download-btn i {
+  transition: transform 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary-blue);
+}
+
+.download-btn:hover i {
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   PESTAÑAS (TABS)
+======================================== */
+
+.tab-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.tab-button:hover {
+  transform: translateY(-1px);
+}
+
+.tab-button:active {
+  transform: translateY(0);
+}
+
+/* Indicador visual en tab activo */
+.tab-button.active::before,
+.tab-button.bg-blue-600::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: white;
+  border-radius: 2px 2px 0 0;
+}
+
+/* ========================================
+   ACORDEONES (DETAILS)
+======================================== */
+
+details {
+  transition: all 0.3s ease;
+}
+
+details summary {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+details summary:hover {
+  background-color: #f3f4f6;
+  padding-left: 1.25rem;
+}
+
+details summary svg {
+  transition: transform 0.3s ease;
+}
+
+details[open] summary svg {
+  transform: rotate(90deg);
+}
+
+details[open] {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   CARDS DE PRODUCTOS RELACIONADOS
+======================================== */
+
+.product-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.product-card:hover::before {
+  left: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ========================================
+   FOOTER MEJORADO
+======================================== */
+
+footer {
+  animation: fadeIn 0.6s ease-out;
+}
+
+footer a {
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+footer .fab, footer .fas {
+  transition: transform 0.3s ease;
+}
+
+footer a:hover .fab,
+footer a:hover .fas {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* ========================================
+   UTILIDADES RESPONSIVAS
+======================================== */
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+  .nav-item:hover {
+    transform: translateY(0);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Optimización para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  aside {
+    width: 200px;
+  }
+}
+
+/* Animación de carga para imágenes */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+/* Efecto de enfoque accesible */
+:focus-visible {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scroll suave en toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación para elementos que entran en viewport */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: slideInFromBottom 0.6s ease-out;
 }
